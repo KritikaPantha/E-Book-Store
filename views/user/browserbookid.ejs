@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/browserbookid.css">
+</head>
+
+<body>
+    <header1>
+        <button class="hey1"><a href="/users/mycart">MY CART</a></button>
+    </header1>
+    <%- include('../partials/userheader.ejs') %>
+    <!-- <header>
+        <h1>
+            <center>E-BOOK STORE</center>
+        </h1>
+        <h2>POKHARA UNIVERSITY
+            <button class="hey"><a href="/users/signin">SignOut</a></button>
+            <button class="hey"><a href="/users/mycart">MY CART(0)</a></button>
+            <button class="hey">Hi,KRITIKA</button>
+        </h2>
+    </header> -->
+    <div id="main">
+        <ul>
+            <li><a href="/users/browser/viewallcomputer">COMPUTER</a></li>
+            <li><a href="/users/browser/viewallcivil">CIVIL</a></li>
+            <li><a href="/users/browser/viewallmechanical">MECHANICAL</a></li>
+            <li><a href="/users/browser/viewallelectronics">ELECTRONICS</a></li>
+            <li><a href="/users/browser/viewallarchitecture">ARCHITECTURE</a></li>
+            <li><a href="/users/home">HOME</a></li>
+        </ul>
+    </div>
+    <div>
+        <% if(result.length>0){%>
+            <% result.forEach(book=>{ %>
+                <a class="single" href="/users/browser/<%=book.bookId%>">
+                    <img src="/images/<%=book.bookImage%>" width="850px" height="370px">
+                   
+                    <!--now-->
+                    <div class="gotorightside">
+                    <!-- <p class="bookId">BookId:
+                        <%=book.bookId%>
+                    </p> -->
+                    <p class="category">Category:
+                        <%=book.category%>
+                    </p>
+                    <p class="bookTitle">BookTitle:
+                        <%=book.bookTitle%>
+                    </p>
+                    <p class="bookauthor">BookAuthor:
+                         <%=book.bookAuthor%> 
+                    </p>
+                    
+                    <p class="cost">Cost:
+                        <%=book.cost%>
+                    </p>
+                    
+                    <p class="BookDate">BookDate:
+                        <%=book.bookDate%>
+                    </p>
+                    <button><a href="/users/browser/<%=book.bookId%>/addtocart">ADD TO MY CART</a></button>
+                </a>
+           <%})%>
+        <%} else{%>
+            <p>There are no books to display, in this category!</p>
+            <%}%>
+                </div>
+            </div>
+                <%- include('../partials/userfooter.ejs') %>
+</body>
+
+</html>

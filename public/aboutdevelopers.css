@@ -1,0 +1,43 @@
+body
+{
+    background-color:rgb(208, 160, 160);
+}
+header{
+    background-color: rgb(228, 228, 190);
+}
+h1{
+      color: black;
+}
+h2{
+      color: brown;
+}
+.Home{
+    float: right;
+}
+
+.cimage {
+     border-radius: 50%;
+    border:rgb(228, 228, 190) solid 5px; 
+  }
+  .adevelopers{
+    margin:5px;
+    padding:5px;
+    width:1230px;
+    display:flex;
+}
+.adevelopers1{
+     margin:5px; 
+     padding:5px;
+    width:400px;
+    text-align: center; 
+    /*position: absolute;
+    right: 480px;*/
+}
+.footer{
+    background-color: beige;
+    color:black;
+    text-align: center;
+    /*new position: absolute;
+    top: 800px;
+    width:1050 px*/
+}

@@ -1,0 +1,172 @@
+body{
+    background-color:white;
+}
+header{
+    border:black 2px solid;
+    background-color: aquamarine;
+    padding:2px;
+    margin:2px;
+}
+.hey1
+{
+    float:right;
+    padding:2px;
+    margin:4px;
+    position:relative;
+    top:85px;
+    right:135px;
+}
+.hey
+{
+    float:right;
+    padding:2px;
+    margin:4px;
+}
+#main
+{
+background-color:brown;
+height:30px;
+border:black 2px solid;
+}
+#main ul
+{
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#main li
+{
+display:inline;
+padding:15px;
+}
+#main a
+{
+text-decoration:none;
+padding:8px;
+color:black;
+vertical-align:middle;
+padding:15px;
+}
+#main a:hover
+{
+background-color:beige;
+color:black;
+}
+
+ .imagetop1{
+    margin:5px;
+    padding:8px;
+    width:300px;
+    text-align:center;
+    display:flex;
+    display:grid;
+    grid: auto / auto auto auto;
+}
+.col-xs-4{
+    padding:18px;
+    border:2px solid black;
+
+}
+
+.five
+{
+    padding:5px;
+    margin:2px;
+    float:right;
+}
+.four
+{
+    padding:5px;
+    margin:2px;
+    float:right;
+}
+.three
+{    
+    padding:5px;
+    margin:2px;
+    float:right;
+}
+.two
+{
+    padding:5px;
+    margin:2px;
+    float:right;
+}
+.one
+{
+    padding:5px;
+    margin:2px;
+}
+
+
+/*
+.A2{
+    float:right;
+}
+.A
+{
+    width:400px;
+    background-color:aquamarine;
+    display:table-cell;
+    cursor:pointer;
+    padding:26px;
+    height:30px;
+    margin:4px;
+}
+.A:hover
+{
+    color:black;
+    background-color: beige;
+} */
+/* .B
+{
+    border:blue 2px solid;
+    width:700px;
+    height:500px;
+    float:right;
+    padding:5px;
+    }
+.B #Computer
+{
+    margin:40px;
+    position:absolute;
+    visibility: visible;
+}
+.B #Civil
+{
+    margin:40px;
+    position:absolute;
+    visibility: hidden;
+}
+.B #Mechanical
+{
+    margin:40px;
+    position:absolute;
+    visibility:hidden;
+}
+.B #Electronics
+{
+    margin:40px;
+    position:absolute;
+    visibility:hidden;
+}
+.B #Architecture
+{
+    margin:40px;
+    position:absolute;
+    visibility:hidden;
+}
+.E
+{
+    font-style:italic;
+}
+html{
+    scroll-behavior: smooth;
+}*/
+.footer{
+    background-color: aquamarine;
+    color:black;
+    text-align: center;
+    border:black 2px solid;
+} 

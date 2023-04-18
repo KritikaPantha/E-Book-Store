@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        <title>E-BOOK STORE</title>
+        <link rel="stylesheet" type="text/css" href="/addabook.css">
+    </head>
+    <body>
+        <%- include('../partials/adminheader.ejs') %>
+        <div id="main">
+            <ul>
+            <li><a href="/admins/menu">MENU</a></li>
+            </ul>
+        </div>
+        <div class="create">
+            <form  action="/admins/addabook" enctype="multipart/form-data" method ="POST">
+                <h2>ADD A BOOK:</h2>
+                <br>
+                <center>
+                <div class="row">
+                <label for="bookImage">Book Image:</label>
+                <input type="file" accept='image/*' id="bookImage" name="bookImage" required>
+                </div>
+                <br>
+                <div class="row">
+                <label for="bookDate">Book Date:</label>
+                <input type="text" id="bookDate" name="bookDate" required>
+                </div>
+                <br>
+                <!-- <div class="row">
+                <label for="bookId">Book ID:</label>
+                <input type="number" id="bookId" name="bookId" required>
+                </div> -->
+                <br>
+                <div class="row">
+                <label for="bookTitle">Book Title:</label>
+                <input type="text" id="bookTitle" name="bookTitle" required>
+                </div>
+                <br>
+                <div class="row">
+                    <label for="bookAuthor">Book Author:</label>
+                    <input type="text" id="bookAuthor" name="bookAuthor" required>
+                    </div>
+                    <br>
+                <div class="row">
+                <label for="cost">Cost:</label>
+                <input type="number" id="cost" name="cost" required>
+                </div>
+                <br>
+                <!-- <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+                <br> -->
+                <div class="row">
+                <label for="category">Category:</label>
+                <select  id="category" name="category" required>
+                <option value="computer">Computer</option>
+                <option value="civil">Civil</option>
+                <option value="architecture">Architecture</option>
+                <option value="electronics">Electronics</option>
+                <option value="mechanical">Mechanical</option>
+                </select>
+                </div>
+                <br>
+                <div class="row">
+                <label for="bookQuantity">Book Quantity:</label>
+                <input type="number" id="bookQuantity" name="bookQuantity" required>
+                </div>
+                <br>
+                <div class="row">
+                <label for="bookFile">Book File:</label>
+                <input type="file" id="bookFile" name="bookFile" required>
+                </div>
+                </center>
+                <br>
+                <button>Submit</button>
+            </form> 
+        </div>
+    <%- include('../partials/adminfooter.ejs') %>
+    </body>
+    </html>

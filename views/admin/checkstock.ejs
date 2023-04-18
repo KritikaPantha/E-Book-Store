@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>E-BOOK STORE</title>
+        <link rel="stylesheet" type="text/css" href="/addabook.css">
+    </head>
+    <body>
+        <%- include('../partials/adminheader.ejs') %>
+        <div id="main">
+            <ul>
+            <li><a href="/admins/menu">MENU</a></li>
+            </ul>
+        </div>
+        <div>
+            <center>
+            <h2>CHECK THE STOCK OF BOOKS PRESENT</h2>
+            <table>
+                <tr>
+                    <% if(result.length>0){%>
+                        <% result.forEach(book=>{ %>
+                            <a class="single" href="/users/browser/<%=book.bookId%>">
+                                <th class="bookTitle">BookTitle:</th>
+                                <th classs="bookQuantity">BookQuantity:</th>
+                                <th class="bookSelectedQuantity">BookSelectedQuantity:</th>
+                                <th classs="stockAvailable">StockAvailable</th>
+                </tr>
+                <tr>
+                    <td class="bookTitle">
+                        <br>
+                        <%=book.bookTitle%>
+                    </td>
+                    <td class="bookQuantity">
+                        <br>
+                        <%=book.bookQuantity%>
+                    </td>
+                    <td classs="bookSelectedQuantity">
+                        <br>
+                        <%=book.totalBookSelectedQty%>
+                    </td>
+                    <td classs="stockAvailable">
+                        <br>
+                        <% if(book.bookAvailable>0){ %>
+                            Books are in Stock
+                        <% } else { %>
+                            Books are not in Stock
+                        <% } %>
+                    </td>
+                </tr>
+                </a>
+                <%})%>
+                    <%} else{%>
+                        <p>There is nothing to display in checking stock option</p>
+                        <%}%>
+            </table>
+            </center>
+        </div>
+        <%- include('../partials/adminfooter.ejs') %>
+        </body>
+        </html>

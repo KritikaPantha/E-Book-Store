@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/browser.css">
+</head>
+<body>
+    <header1>
+        <button class="hey1"><a href="/users/mycart">MY CART</a></button>
+    </header1>
+    <%- include('../partials/userheader.ejs') %>
+    <!-- <header> 
+        <h1>
+            <center>E-BOOK STORE</center>
+        </h1>
+        <h2>POKHARA UNIVERSITY
+            <button class="hey"><a href="/users">SignOut</a></button>
+            <button class="hey">MY CART</button>
+            <button class="hey">Hi,Kritika</button>
+        </h2>
+    </header> -->
+    <div id="main">
+        <ul>
+            <li><a href="/users/browser/viewallcomputer">COMPUTER</a></li>
+            <li><a href="/users/browser/viewallcivil">CIVIL</a></li>
+            <li><a href="/users/browser/viewallmechanical">MECHANICAL</a></li>
+            <li><a href="/users/browser/viewallelectronics">ELECTRONICS</a></li>
+            <li><a href="/users/browser/viewallarchitecture">ARCHITECTURE</a></li>
+            <li><a href="/users/home">HOME</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+            <div id="Electronics">
+              <span class="E"><center>BOOKS OF ELECTRONICS CATEGORY</center> </span>
+                <!--<span class="A2"><a href="/users/browser/viewallcomputer">View All</a></span>-->
+                    <div class="imagetop1">
+                        <% if(result.length>0){%>
+                            <% result.forEach(book=>{ %>
+                                <div class="col-xs-4">
+                                    <img src="/images/<%=book.bookImage%>" width="370px" height="370px">
+                                    <a class="single" href="/users/browser/<%=book.bookId%>">
+                                        <h3 class="bookTitle">BookTitle:
+                                            <%=book.bookTitle%>
+                                        </h3>
+                                        <p class="cost">Cost:
+                                            <%=book.cost%>
+                                        </p>
+                                        <!-- <p class="bookId">BookId:
+                                            <%=book.bookId%>
+                                        </p> -->
+                                    </a>
+                                </div>
+                                <%})%>
+                                    <%} else{%>
+                                        <p>There are no books to display, in this category!</p>
+                                        <%}%>
+                    </div>
+                    <br>
+                </div>
+                <%- include('../partials/userfooter.ejs') %>
+            
+</body>
+
+</html>

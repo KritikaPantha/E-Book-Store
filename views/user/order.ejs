@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/addtocart.css">
+</head>
+<body>
+    <header1>
+        <button class="hey1"><a href="/users/mycart">MY CART</a></button>
+    </header1>
+    <%- include('../partials/userheader.ejs') %>
+<div class="order">
+    <center>
+        <h2>YOUR ORDER SUMMARY</h2>
+        <table>
+            <tr>
+                <th class="bookDate">BookDate:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                <th class="cost">Cost:</th>
+                <% if(result.length>0){%>
+                    <% result.forEach(book=>{ %>
+                        <a class="single" href="/users/browser/<%=book.bookId%>">
+            </tr>
+            <tr>
+                <td class="bookDate">
+                    <br>
+                    <%=book.bookDate%>
+                </td>
+                <td classs="cost">
+                    <br>
+                    <%=book.cost%>
+                </td>
+
+            </tr>
+            </tr>
+            </a>
+            <%})%>
+                <%} else{%>
+                    <p>There is nothing to display in my cart</p>
+                    <%}%>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<th class="total"><h3>Total:<%=total%></h3></th>
+        </table>
+        <button><a href="/users/payment">Payment</a></button>
+    </center>
+</div>
+<%- include('../partials/userfooter.ejs') %>
+</body>
+</html>

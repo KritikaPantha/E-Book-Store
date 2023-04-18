@@ -1,0 +1,136 @@
+body
+{
+    background-color:rgb(208, 160, 160);
+}
+header{
+  background-color: rgb(228, 228, 190);
+}
+h1{
+    color: black;
+}
+h2{
+    color: brown;
+}
+.signin
+{
+    float:right;
+    cursor:pointer;
+}
+.container1
+{
+    padding: 16px;
+    background-color: white;
+    position:absolute;
+    top:185px;
+    right:10px;
+    
+}
+.formpage
+{
+    background-color: white;
+    color:black;
+    border:whitesmoke solid 2px;
+    padding:80px;
+    margin:5px;
+    display:table;
+}
+.row
+{
+    display:table-row;
+}
+.row label
+{
+    display:table-cell;
+    padding:5px;
+}
+.frontfig
+{
+    background-color: white;
+    width:1248px;
+    height:600px;
+}
+.ebookimg
+{
+width:800px;
+height:600px;
+}
+.signup
+{
+    cursor:pointer;
+}
+.A2
+{
+    float:right;
+}
+ 
+.imagetop{
+    background-color: beige;
+    margin:5px;
+    border:beige 2px solid;
+    padding:5px;
+    width:1230px;
+    display:flex;
+}
+.imagetop1{
+    background-color: brown;
+    margin:5px;
+    border:beige 2px solid;
+    padding:5px;
+    width:400px;
+    text-align: center;
+}
+
+.imagenew{
+    background-color: beige;
+    margin:5px;
+    border:beige 2px solid;
+    padding:5px;
+    width:1230px;
+    display:flex; 
+}
+.imagenew1{
+    background-color: brown;
+    margin:5px;
+    border:beige 2px solid;
+    padding:5px;
+    width:400px;
+    text-align: center;
+}
+.imagenew1 .style
+{
+  color:black;
+
+}
+
+.G ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align:center;
+}
+.G li{
+    display:inline;
+    padding:5px;
+}
+.G a{
+    text-decoration: none;
+    padding:8px;
+    color:brown;
+    vertical-align:middle;
+    margin:100px;
+}
+.G a:hover{
+ background-color: brown;
+ color:black;
+}
+.footer{
+    background-color: beige;
+    color:black;
+    text-align: center;
+}
+
+
+
+
+
+

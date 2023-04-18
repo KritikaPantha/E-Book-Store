@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>E-BOOK STORE</title>
+        <link rel="stylesheet" type="text/css" href="/addabook.css">
+    </head>
+    <body>
+        <%- include('../partials/adminheader.ejs') %>
+        <div id="main">
+            <ul>
+            <li><a href="/admins/menu">MENU</a></li>
+            </ul>
+        </div>
+<div class="vieworder">
+    <center>
+    <h3>VIEW ORDER</h3>
+    <table>
+        <tr>
+            <th class="fullName">Full Name:</th>
+            &nbsp; &nbsp; &nbsp;
+            <th classs="bookTitle">BookTitle:</th>
+        </tr>
+        <tr>
+            <% if(result.length>0){%>
+        <tr>
+            <% result.forEach(order=>{ %>
+                <a class="single" href="/users/browser/<%=order.userId%>">
+                    <td class="fullName">
+                        <br>
+                        <%=order.fullName%>
+                    </td>
+                </a>
+                
+                <a class="single" href="/users/browser/<%=order.bookId%>">
+                    <td class="bookTitle">
+                        <br>
+                        <%=order.bookTitle%>
+                    </td>
+                </a>
+        </tr>
+ <%})%>
+ <%} else{%>
+                <p>There is nothing to display in my cart</p>
+                <%}%>
+                    </tr>
+    </table>
+    </center>
+</div>
+<%- include('../partials/adminfooter.ejs') %>
+    </body>
+    </html>

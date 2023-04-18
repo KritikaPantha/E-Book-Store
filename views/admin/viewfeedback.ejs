@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/adminmenu.css">
+</head>
+
+<body>
+    <%- include('../partials/adminheader.ejs') %>
+        <div id="main">
+            <ul>
+                <li><a href="/admins/menu">MENU</a></li>
+            </ul>
+        </div>
+        <div>
+            <center>
+                <h3>VIEW FEEDBACK</h3>
+                <table>
+                    <tr>
+                      <!-- <th class="fullName">FullName:&nbsp&nbsp&nbsp&nbsp&nbsp</th>-->
+                        <th class="bookTitle">BookTitle:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                        <th class="feedback">Feedback:</th>
+                        </tr>
+                        <br>
+                        <% if(result.length>0){%>
+                            <% result.forEach(feedback=>{ %>
+                                    <a class="single" href="/users/browser/<%=feedback.feedbackId%>">
+                                        <!-- <td class="fullName">
+                                            <br>
+                                            <%=feedback.fullName%>
+                                        </td> -->
+                                        <td class="bookTitle">
+                                            <br>
+                                            <%=feedback.bookTitle%>
+                                        </td>
+                                        <td class="feedback">
+                                            <br>
+                                            <%=feedback.feedback%>
+                                        </td>
+                                    </a>
+                    </tr>
+                     <%})%>
+                        <%} else{%>
+                            <p>There is nothing to display in view feedback</p>
+                        <%}%>
+                </table>
+            </center>
+        </div>
+        <%- include('../partials/adminfooter.ejs') %>
+</body>
+
+</html>

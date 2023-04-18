@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>E-BOOK STORE</title>
+        <link rel="stylesheet" type="text/css" href="/adminmenu.css">
+    </head>
+    <body>
+        <%- include('../partials/adminheader.ejs') %>
+        <!-- <header>
+        <h1><center>E-BOOK STORE</center></h1>
+        <h2>A BETTER PLACE TO SHOP, SELL AND LEARN ANYTIME ANYWHERE
+        <button class="hey"><a href="/admins">SignOut</a></button>
+        <button class="hey">Hi,ADMIN</button>
+        </h2>
+        </header> -->
+        <div id="main">
+            <ul>
+            <li><a href="/admins/menu">MENU</a></li>
+            <!-- <li><a href="/admins/home">HOME</a></li> -->
+            </ul>
+        </div>
+        <center> 
+        <div class="adminmenu">
+        <h3> ADMIN MENU</h3>
+        <button class="B"><a href="/admins/addabook">ADD BOOK</a></button>
+        <br>
+        <button class="B"><a href="/admins/removeabook">REMOVE BOOK</a></button>
+        <br>
+        <button class="B"><a href="/admins/checkstock">CHECK THE STOCK OF BOOKS PRESENT</a></button>
+        <br>
+        <button class="B"><a href="/admins/vieworder">VIEW ORDERS</a></button>
+        <br>
+        <button class="B"><a href="/admins/viewfeedback">VIEW FEEDBACK</a></button>
+        </div>
+        </center> 
+        <%- include('../partials/adminfooter.ejs') %>
+         <!-- <footer class="footer">
+            <p>Special Thanks To Our Project Supervisor Asst.Prof.Ashish Kumar Jha</p>
+            <p>&copy;2020 All right reserved to CSE Department, Nepal Engineering College, Pokhara</p>  
+        </footer>  -->
+    </body>
+    </html>
+            
+
+        

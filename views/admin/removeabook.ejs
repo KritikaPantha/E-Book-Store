@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/browser.css">
+</head>
+<body>
+    <%- include('../partials/adminheader.ejs') %>
+        <div id="main">
+            <ul>
+            <li><a href="/admins/menu">MENU</a></li>
+            </ul>
+        </div>
+    <br>
+    <br>
+            <div id="Computer">
+              <span class="E"><center>BOOKS OF COMPUTER CATEGORY</center> </span>
+                <!--<span class="A2"><a href="/users/browser/viewallcomputer">View All</a></span>-->
+                    <div class="imagetop1">
+                        <% if(result.length>0){%>
+                            <% result.forEach(book=>{ %>
+                                <div class="col-xs-4">
+                                    <img src="/images/<%=book.bookImage%>" width="370px" height="370px">
+                                    <a class="single" href="/users/browser/<%=book.bookId%>">
+                                       
+                                        <button><a href="/admins/<%=book.bookId%>/delete">DELETE</a></button>
+                                    </a>
+                                </div>
+                                <%})%>
+                                    <%} else{%>
+                                        <p>There are no books to display</p>
+                                        <%}%>
+                    </div>
+                    <br>
+                </div>
+                <%- include('../partials/adminfooter.ejs') %>
+            
+</body>
+
+</html>

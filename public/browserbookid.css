@@ -1,0 +1,96 @@
+body{
+    background-color:white;
+}
+header{
+    border:black 2px solid;
+    background-color: aquamarine;
+    padding:2px;
+    margin:2px;
+}
+.hey1
+{
+    float:right;
+    padding:2px;
+    margin:4px;
+    position:relative;
+    top:85px;
+    right:135px;
+}
+.hey
+{
+    float:right;
+    padding:2px;
+    margin:4px;
+}
+#main
+{
+background-color:brown;
+height:30px;
+border:black 2px solid;
+}
+#main ul
+{
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#main li
+{
+display:inline;
+padding:15px;
+}
+#main a
+{
+text-decoration:none;
+padding:8px;
+color:black;
+vertical-align:middle;
+padding:15px;
+}
+#main a:hover
+{
+background-color:beige;
+color:black;
+}
+.A1{
+    width:650px;
+    height:490px;
+    float:right;
+    margin-right: 2px;
+    margin-top: 4px;
+    background-color:beige;
+    color:black;
+    border:black 2px solid;
+    border-radius:5px;
+}
+.bookform
+{
+    background-color:beige;
+    color:black;
+    padding:120px;
+    margin:5px;
+    display:table;
+    border:black 2px solid;
+    border-radius:5px;
+}
+.row1
+{
+    display:table-row;
+}
+.row1 label
+{
+    display:table-cell;
+    padding:5px;
+}
+.gotorightside{
+    float:right;
+    padding: 20px;
+    font-size:22px;
+}
+.footer{
+    background-color: aquamarine;
+    color:black;
+    text-align: center;
+    border:black 2px solid;
+}

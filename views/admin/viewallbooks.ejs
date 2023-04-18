@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/browser.css">
+</head>
+<body>
+    <%- include('../partials/adminheader.ejs') %>
+    <div id="main">
+        <ul>
+        <li><a href="/admins/menu">MENU</a></li>
+        </ul>
+    </div>
+    <br>
+    <br>
+            <div id="AllBooks">
+              <span class="E"><center>BOOKS OF All CATEGORY</center> </span>
+                <!--<span class="A2"><a href="/users/browser/viewallcomputer">View All</a></span>-->
+                    <div class="imagetop1">
+                        <% if(result.length>0){%>
+                            <% result.forEach(book=>{ %>
+                                <div class="col-xs-4">
+                                     <img src="/images/<%=book.bookImage%>" width="370px" height="370px">
+                                    <a class="single" href="/users/browser/<%=book.bookId%>">
+                                        <!--<img src="/uploads/<%=book.bookImage%>" width="370px" height="370px">-->
+                                        
+                                        <!-- <h3 class="bookTitle">BookFile:
+                                            <%=book.bookTitle%>
+                                        </h3> -->
+                                        <!--<p class="cost">Cost:
+                                            <%=book.cost%>
+                                        </p>
+                                        <p class="bookId">BookId:
+                                            <%=book.bookId%>
+                                        </p> -->
+                                    </a>
+                                </div>
+                                <%})%>
+                                    <%} else{%>
+                                        <p>There are no books to display</p>
+                                        <%}%>
+                    </div>
+                    <br>
+                </div>
+                <%- include('../partials/adminfooter.ejs') %>
+            </body>
+            </html>

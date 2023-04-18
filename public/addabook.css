@@ -1,0 +1,75 @@
+body{
+     background-color:white;
+} 
+header{
+    border:black 2px solid;
+    background-color: aquamarine;
+    padding:2px;
+    margin:2px;
+}
+.hey
+{
+    float:right;
+    padding:2px;
+    margin:4px;
+}
+#main
+{
+background-color:brown;
+height:30px;
+border:black 2px solid;
+}
+#main ul
+{
+padding:0;
+margin:0;
+list-style:none;
+text-align:center;
+}
+#main li
+{
+display:inline;
+padding:15px;
+}
+#main a
+{
+text-decoration:none;
+padding:8px;
+color:black;
+vertical-align:middle;
+padding:15px;
+}
+#main a:hover
+{
+background-color:beige;
+color:black;
+}
+.row
+{
+    display:table-row;
+    text-align: left;
+}
+.row label
+{
+    display:table-cell;
+    padding:2px;
+    text-align: left;
+}
+.create{
+    border:black 2px solid;
+    text-align: center;
+}
+/* .create-book content
+ {
+    color:black;
+    background-color: red;
+    padding:2px;
+    border: black 2px solid;
+    margin:5px;
+}   */
+.footer{
+    background-color: aquamarine;
+    color:black;
+    text-align: center;
+    border:black 2px solid;
+}

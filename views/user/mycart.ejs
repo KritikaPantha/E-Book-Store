@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <!doctype html>
+    <html>
+                    <head>
+                        <!-- <title>MY CART</title>
+                        <link rel="stylesheet" type="text/css" href="../browser.css"> -->
+                        <title>E-BOOK STORE</title>
+                     <link rel="stylesheet" type="text/css" href="/addtocart.css">
+                    </head>
+                    
+                    <body>
+                        <header1>
+                            <button class="hey1"><a href="/users/mycart">MY CART</a></button>
+                        </header1>
+                        <%- include('../partials/userheader.ejs') %>
+                        <center>
+<!-- <form action="/users/mycart" method="POST"> -->
+<div class="cart">
+    <form action="/users/mycart" method="POST">
+    <h2>MY CART</h2>
+    <table>
+        <tr>
+            <% if(result.length>0){%>
+                <% result.forEach(book=>{ %>
+                    <a class="single" href="/users/browser/<%=book.bookId%>">
+                        <th class=""></th>
+                        <th class="bookImage">BookDate:</th>
+                        <th classs="bookId">BookTitle:</th>
+                        <th classs="bookId">Category:</th>
+                        <th class="bookQuantity">BookSelectedQuantity:</th>
+                        <th classs="cost">Cost:</th>
+        </tr>
+        <tr>
+            <td><button><a href="/users/<%=book.bookId%>/deleteacart">DELETE</a></button></td>
+            
+            <td class="BookDate">
+                <%=book.bookDate%>
+            </td>
+            <td class="bookTitle">
+                <br>
+                <%=book.bookTitle%>
+            </td>
+            <td class="category">
+                <br>
+                <%=book.category%>
+            </td>
+            <td class="bookSelectedQuantity">
+                <br>
+                <%=book.bookSelectedQuantity%>
+            </td>
+            <td classs="cost">
+                <br>
+                <%=book.cost%>
+            </td>
+        </tr>
+        </a>
+        <%})%>
+            <%} else{%>
+                <p>There is nothing to display in my cart</p>
+                <%}%>
+    </table>
+        <button><a href="/users/order">ORDER</a></button>
+        <button><a href="/users/continueshopping">CONTINUE SHOPPING</a></button> 
+
+</form>
+</div>
+</center>
+<%- include('../partials/userfooter.ejs') %>
+</body>
+</html>

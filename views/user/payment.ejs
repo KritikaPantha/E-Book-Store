@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/addtocart.css">
+</head>
+<body>
+    <header1>
+        <button class="hey1"><a href="/users/mycart">MY CART</a></button>
+    </header1>
+    <%- include('../partials/userheader.ejs') %>
+    <div class="payment">
+    <center>
+        <h3>After Payment, We can download here!! </h3>
+        <table>
+            <tr>
+                <th class="bookId">BookId:</th>
+                <th class="cost">Cost:</th>
+                <th class="cost">Download Here:</th>
+                <% if(result.length>0){%>
+                    <% result.forEach(book=>{ %>
+                        <a class="single" href="/users/browser/<%=book.bookId%>">
+            </tr>
+            <tr>
+                <td class="bookId">
+                    <br>
+                    <%=book.bookId%>
+                </td>
+                <td class="cost">
+                    <br>
+                    <%=book.cost%>
+                </td>
+                <!-- <td><button><a href="/users/download/<%=book.bookId%>">Download</a></button></td> -->
+                <td><button><a href="/users/download/<%=book.bookId%>">Download<%=book.bookFile%></a></button></td
+                
+                </tr>
+            </tr>
+            </a>
+            <%})%>
+                <%} else{%>
+                    <p>There is nothing to display in my cart</p>
+                    <%}%>
+        </table>
+    </center>
+</div>
+
+<%- include('../partials/userfooter.ejs') %>
+</body>
+</html>

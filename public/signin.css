@@ -1,0 +1,40 @@
+body
+{
+    background-color:rgb(208, 160, 160);
+}
+header{
+    background-color: rgb(208, 160, 160);
+}
+h1{
+      color: black;
+}
+h2{
+      color: brown;
+}
+.Home{
+    float: right;
+}
+.otherform
+{
+    background-color:beige;
+    color:black;
+    padding:80px;
+    margin:5px;
+    display:table;
+    border:black 2px solid;
+    border-radius:5px;
+}
+.row
+{
+    display:table-row;
+}
+.row label
+{
+    display:table-cell;
+    padding:5px;
+}
+.footer{
+    background-color:rgb(208, 160, 160);
+    color:black;
+    text-align: center;
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="/addtocart.css">
+</head>
+
+<body>
+    <header1>
+        <button class="hey1"><a href="/users/mycart">MY CART</a></button>
+    </header1>
+    <%- include('../partials/userheader.ejs') %>
+    <!-- <header>
+        <h1>
+            <center>E-BOOK STORE</center>
+        </h1>
+        <h2>POKHARA UNIVERSITY
+            <button class="hey"><a href="/users/signin">SignOut</a></button>
+            <button class="hey"><a href="/users/mycart">MY CART</a></button>
+            <button class="hey">Hi,KRITIKA</button>
+        </h2>
+    </header> -->
+    <div id="main">
+        <ul>
+            <li><a href="/users/browser/viewallcomputer">COMPUTER</a></li>
+            <li><a href="/users/browser/viewallcivil">CIVIL</a></li>
+            <li><a href="/users/browser/viewallmechanical">MECHANICAL</a></li>
+            <li><a href="/users/browser/viewallelectronics">ELECTRONICS</a></li>
+            <li><a href="/users/browser/viewallarchitecture">ARCHITECTURE</a></li>
+            <li><a href="/users/home">HOME</a></li>
+        </ul>
+    </div>
+    <div class="cart">
+        <h3>MY CART(2)</h3>
+        <table>
+            <tr>
+                <% if(result.length>0){%>
+                    <% result.forEach(book=>{ %>
+
+
+                        <a class="single" href="/users/browser/<%=book.bookId%>">
+                            <th class=""></th>
+                            <th class="bookImage">BookImage:</th>
+                            <th classs="bookId">BookId:</th>
+                            <th class="bookQuantity">BookQuantity:</th>
+                            <th classs="cost">Cost:</th>
+            </tr>
+            <tr>
+                <td><button>DELETE</button></td>
+                <td class="bookImage">
+                    <br>
+                    <%=book.bookImage%>
+                </td>
+                <td classs="bookId">
+                    <br>
+                    <%=book.bookId%>
+                </td>
+                <td class="bookQuantity">
+                    <br>
+                    <%=book.bookQuantity%>
+                </td>
+                <td classs="cost">
+                    <br>
+                    <%=book.cost%>
+                </td>
+            </tr>
+            </tr>
+            </a>
+            <%})%>
+                <%} else{%>
+                    <p>There is nothing to display in my cart</p>
+                    <%}%>
+        </table>
+    </div>
+    <!-- </form> -->
+    <div class="order">
+        <center>
+            <h3>YOUR ORDER SUMMARY</h3>
+            <table>
+                <tr>
+                    <th>BookId</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>250</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>500</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>750</td>
+                </tr>
+            </table>
+            <button>CONFIRM ORDER</button>
+        </center>
+    </div>
+    <%- include('../partials/userfooter.ejs') %>
+</body>
+
+</html>

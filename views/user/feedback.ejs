@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-BOOK STORE</title>
+        <link rel="stylesheet" type="text/css" href="../feedback.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <h1><center><bold>E-BOOK STORE</bold></center></h1>
+            <h2><center>A BETTER PLACE TO SHOP, SELL AND LEARN ANYTIME ANYWHERE
+                <i class="fa fa-book"></i>
+                <i class="fa fa-book" style="font-size:48px"></i>
+                <i class="fa fa-book" style="font-size:60px;color:red;"></i>
+                </div></center></h2>
+            <button class="Home"><a href="/users/signout">SignOut</a></button>
+        </header>
+        <center>
+        <form  action="/users/feedback" method="POST" class="feedback">
+            
+            <h3>FEEDBACK</h3>
+            <h4>You can directly submit your feedback or any report regarding
+                this website here:
+            </h4>
+            <!-- <label for="fullName">FullName:</label>
+              <input type="fullName" id="fullName" name="fullName">
+              </div>
+              <br> -->
+            <br>
+            <label for="bookTitle">BookTitle:</label>
+            <input type="bookTitle" id="bookTitle" name="bookTitle">
+            </div>
+            <br>
+            <br>
+            Feedback:
+            <textarea  rows:"100" cols="21" id="feedback" name="feedback"></textarea>
+            <br>
+            <button>Submit</button>
+        </form>
+        </center>
+        <footer class="footer">
+            <p>Special Thanks To Our Project Supervisor Asst.Prof.Ashish Kumar Jha</p>
+            <p>&copy;2020 All right reserved to CSE Department, Nepal Engineering College, Pokhara</p>  
+        </footer>
+    </body>
+</html>

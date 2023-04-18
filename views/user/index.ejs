@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <title>E-BOOK STORE</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <header>
+        <h1><center><bold>E-BOOK STORE</h1>
+        <h2>A BETTER PLACE TO SHOP, SELL AND LEARN ANYTIME ANYWHERE
+            <i class="fa fa-book"></i>
+            <i class="fa fa-book" style="font-size:48px"></i>
+            <i class="fa fa-book" style="font-size:60px;color:red;"></i>
+            </div></h2>
+      </header>
+         <div>   
+         <a class="signin" href="/users/signin">Sign In</a>
+         <!-- <button class="signin">Sign In</button> -->
+         </div>
+         <div class="frontfig">
+        <div class="container1">
+            <form action="/users" method="POST" class="formpage">
+              <div class="row">
+              <label for="fullName">Full Name:</label>
+              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+              </div>
+              <br>
+              <div class="row">
+              <label for="gender">Gender:</label>
+              <select  id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Others">Others</option>
+              </select>
+              </div>
+              <br>  
+              <div class="row">        
+              <label for="address">Address:</label>
+              <input type="text" id="address" name="address" placeholder="Enter your address" required>
+              </div>
+              <br>
+              <div class="row">
+              <label for="emailId">EmailId:</label>
+              <input type="text" id="emailId" name="emailId" placeholder="Enter your email-address" required>
+              </div>
+              <br>
+              <div class="row">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              </div>
+              <br>
+              <div class="row">
+              <label for="rePassword">RePassword:</label>
+              <input type="password" id="rePassword" name="rePassword" placeholder="Reconfirm your password" required>
+              </div>
+              <br>
+              <div class="row">
+              <!--<button  onclick="return validateSignUp(); return Validate();" class="signup" >Sign Up</button>-->
+              <button  onclick="return validateSignUp();" class="signup" >Sign Up</button>
+             <!--<input  type="button" class="signup" value="Sign Up" onclick="return validateSignUp(); return Validate();"/>-->
+            </div>
+            </form>
+        </div>
+        <img class="ebookimg" src="../images/eBooks.jpg">
+        </div>
+        </section>  
+        <div class="G">
+          <ul>
+          <li><a class="aboutus" href="/users/aboutus">About Us</a></li>
+          <li><a class="adminlogin" href="/admins/adminlogin">Admin Login</a></li>
+          <li><a class="aboutdevelopers" href="/users/aboutdevelopers">About Developers</a></li>
+           <li><a class="feedback" href="/users/feedback">Feedback</a></li> 
+          </ul>
+        </div>
+        <footer class="footer">
+        <p>Special Thanks To Our Project Supervisor Asst.Prof.Ashish Kumar Jha</p>
+        <p>&copy;2020 All right reserved to CSE Department, Nepal Engineering College, Pokhara</p>  
+        </footer>
+ 
+   <script type="text/javascript">
+        //email validation
+    function validateSignUp() {
+    var signUp = document.getElementById("emailId");
+    if ((signUp.value.indexOf('@') > -1) && (signUp.value.indexOf('.') > -1))
+    {
+      return true;
+    }
+    alert("You have not entered correct email");
+    return false;
+  }
+  //password ans re-password check
+     function Validate() {
+      var password = document.getElementById("password").value;
+      var rePassword = document.getElementById("rePassword").value;
+      if (password != rePassword) {
+        alert("Passwords do not match.");
+        return false;
+      }
+      return true;
+  } 
+
+   
+  
+  </script>
+  
+  </body>
+</html>
